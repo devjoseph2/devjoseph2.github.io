@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": "MATTHIAS M JOSEPH",
+    "subtitle": "I build <span class=\"text-brand-primary\">Java</span> applications with a <span class=\"text-brand-secondary\">Business</span> mindset."
+  },
+  "about": {
+    "description": "<p>I'm a passionate Java Developer, currently pursuing my B.S. in Computer Science, and I also hold a degree in Business Administration. I don't just write code; I build solutions that drive business value. This unique combination allows me to understand core business operations and strategic goals, letting me bridge the critical gap between technical teams and business stakeholders.</p><p>I am currently pursuing a Bachelor's in Computer Science to build a deep theoretical foundation, while simultaneously honing my practical skills in full-stack development. I combine robust back-end logic in <strong class=\"text-brand-primary\">Java</strong> (Spring Boot) with modern front-end technologies like <strong class=\"text-yellow-500\">JavaScript</strong>.</p><p>I'm a natural problem-solver, a collaborative team player, and I'm always eager to learn. I'm looking for an opportunity to contribute to challenging projects where I can leverage both my technical and business-acumen.</p>"
+  },
+  "projects": [
+    {
+      "title": "E-commerce Platform",
+      "description": "A brief description of your project. What problem does it solve? What was your role?",
+      "imageUrl": "https://placehold.co/600x400/0a192f/e6f7ff?text=E-commerce+Platform",
+      "tags": ["Java", "Spring Boot", "PostgreSQL", "JavaScript"],
+      "repoUrl": "#",
+      "liveUrl": "#"
+    },
+    {
+      "title": "Fintech API",
+      "description": "A brief description of your project. What problem does it solve? What was your role?",
+      "imageUrl": "https://placehold.co/600x400/0a192f/e6f7ff?text=Fintech+API",
+      "tags": ["Java", "Spring Security", "REST API"],
+      "repoUrl": "#",
+      "liveUrl": null
+    },
+    {
+      "title": "Data Analysis Tool",
+      "description": "A brief description of your project. What problem does it solve? What was your role?",
+      "imageUrl": "https://placehold.co/600x400/0a192f/e6f7ff?text=Data+Analysis+Tool",
+      "tags": ["Java", "JavaScript", "Data Analysis"],
+      "repoUrl": "#",
+      "liveUrl": "#"
+    }
+  ]
+}

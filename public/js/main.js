@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchPortfolioContent() {
     try {
-        // Fetch from the local JSON file
-        const response = await fetch('public/data/portfolio.json');
+        // Fetch from the root portfolio.json file
+        const response = await fetch('portfolio.json');
         if (!response.ok) {
             throw new Error('Failed to fetch portfolio content from JSON file.');
         }
