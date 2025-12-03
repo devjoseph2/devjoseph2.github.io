@@ -378,35 +378,30 @@
                     I'm currently seeking new opportunities and am open to messages. Whether you have a question, a project proposal, or just want to connect, feel free to use the form below.
                 </p>
                 
-                <!-- New Contact Form -->
-                <!-- 
-                  HOW TO USE THIS FORM:
-                  1. Go to https://formspree.io/ and create a new form.
-                  2. It will give you a URL. Replace "[YOUR_FORM_ID]" in the `action` attribute below with your Formspree form ID.
-                  3. When a user submits, Formspree will email you the contents.
-                -->
-                <form action="https://formspree.io/f/mvgvbpkk" method="POST" class="text-left max-w-xl mx-auto space-y-6">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                        <input type="text" name="name" id="name" required
-                               class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
+                <form action="https://formspree.io/f/mvgvbpkk" method="POST" class="text-left max-w-xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                            <input type="text" name="name" id="name" required
+                                   class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                            <input type="email" name="email" id="email" required
+                                   class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
+                        </div>
                     </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                        <input type="email" name="email" id="email" required
-                               class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
-                    </div>
-                    <div>
+                    <div class="mt-6">
                         <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
                         <input type="text" name="subject" id="subject"
                                class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
                     </div>
-                    <div>
+                    <div class="mt-6">
                         <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
                         <textarea name="message" id="message" rows="5" required
                                   class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all"></textarea>
                     </div>
-                    <div class="text-center">
+                    <div class="mt-8 text-center">
                         <button type="submit"
                                 class="inline-block bg-brand-primary text-white font-bold text-lg px-10 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
                             Send Message
