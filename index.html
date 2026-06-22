@@ -41,11 +41,12 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Light gray background */
-            color: #1e293b; /* Dark slate text */
+            background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+            color: #1e293b;
         }
         .section-heading {
-            @apply text-4xl font-bold text-center mb-12 text-gray-800;
+            @apply text-5xl font-bold text-center mb-12 text-gray-900;
+            letter-spacing: -0.02em;
         }
         .skill-icon {
             @apply w-16 h-16 transition-transform duration-300;
@@ -64,27 +65,25 @@
 <body class="antialiased">
 
     <!-- Header & Navigation -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-xl shadow-sm border-b border-gray-200/50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex justify-between items-center">
             <!-- Logo / Name -->
-            <a href="#" class="text-2xl font-extrabold text-brand-primary">
-                MATTHIAS M JOSEPH
+            <a href="#" class="text-2xl font-black bg-gradient-to-r from-brand-primary to-indigo-600 bg-clip-text text-transparent">
+                MJ
             </a>
-            
+
             <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="https[Your GitHub URL]" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gray-800 text-white px-5 py-2 rounded-lg font-medium hover:bg-gray-700 transition-colors shadow-sm">
-                    <!-- GitHub Icon SVG -->
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.84c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.135 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-sm font-medium">Home</a>
+                <a href="#about" class="nav-link text-sm font-medium">About</a>
+                <a href="#skills" class="nav-link text-sm font-medium">Skills</a>
+                <a href="#projects" class="nav-link text-sm font-medium">Projects</a>
+                <a href="#contact" class="nav-link text-sm font-medium">Contact</a>
+                <a href="https://github.com/devjoseph2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gray-900 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-800 transition-colors shadow-sm text-sm">
                     GitHub
                 </a>
             </div>
-            
+
             <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-gray-800 hover:text-brand-primary focus:outline-none">
@@ -94,17 +93,16 @@
                 </button>
             </div>
         </nav>
-        
+
         <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-200">
             <nav class="flex flex-col p-4 space-y-2">
                 <a href="#home" class="mobile-nav-link">Home</a>
                 <a href="#about" class="mobile-nav-link">About</a>
                 <a href="#skills" class="mobile-nav-link">Skills</a>
                 <a href="#projects" class="mobile-nav-link">Projects</a>
                 <a href="#contact" class="mobile-nav-link">Contact</a>
-                <a href="https://github.com/[Your GitHub Username]" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gray-800 text-white w-full px-5 py-3 rounded-lg font-medium hover:bg-gray-700 transition-colors shadow-sm">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.84c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.135 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                <a href="https://github.com/devjoseph2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-gray-900 text-white w-full px-5 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors shadow-sm mt-2">
                     GitHub
                 </a>
             </nav>
@@ -115,153 +113,163 @@
     <main id="portfolio-content">
         
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-[calc(100vh-68px)] flex items-center bg-white overflow-hidden">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+        <section id="home" class="relative min-h-[calc(100vh-68px)] flex items-center bg-gradient-to-br from-blue-50 via-white to-indigo-50 overflow-hidden">
+            <div class="absolute inset-0 opacity-30">
+                <div class="absolute top-20 right-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+                <div class="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
+            </div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative z-10">
                 <!-- Hero Text -->
-                <div class="text-center md:text-left">
-                    <span class="text-brand-primary font-semibold text-lg">Hi, my name is</span>
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 mt-2 mb-4">
-                        MATTHIAS M JOSEPH
+                <div class="text-center">
+                    <span class="inline-block text-brand-primary font-semibold text-lg bg-blue-100 px-4 py-2 rounded-full mb-6">Full Stack Developer</span>
+                    <h1 class="text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 mt-4 mb-6 leading-tight">
+                        Build with <span class="bg-gradient-to-r from-brand-primary to-indigo-600 bg-clip-text text-transparent">Purpose</span>
                     </h1>
-                    <p class="text-2xl md:text-3xl font-medium text-gray-600 mb-8">
-                        I build <span class="text-brand-primary">Java</span> applications with a <span class="text-brand-secondary">Business</span> mindset.
+                    <p class="text-2xl md:text-3xl font-medium text-gray-600 mb-8 max-w-3xl mx-auto">
+                        Java developer bridging technical excellence with business strategy. Creating scalable solutions that drive real impact.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="#projects" class="inline-block bg-brand-primary text-white font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#projects" class="inline-block bg-gradient-to-r from-brand-primary to-blue-600 text-white font-bold text-lg px-10 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                             View My Work
                         </a>
-                        <a href="#contact" class="inline-block bg-gray-200 text-gray-800 font-bold text-lg px-8 py-3 rounded-lg shadow-lg hover:bg-gray-300 transition-all duration-300 transform hover:scale-105">
+                        <a href="#contact" class="inline-block bg-white border-2 border-gray-200 text-gray-900 font-bold text-lg px-10 py-4 rounded-xl shadow-lg hover:border-brand-primary transition-all duration-300">
                             Get in Touch
                         </a>
                     </div>
-                </div>
-                
-                <!-- Hero Image/Graphic (Placeholder) -->
-                <div class="hidden md:block">
-                    <img src="https://placehold.co/600x600/e0f2fe/0c4a6e?text=Code+%26+Strategy" alt="Abstract graphic showing code and strategy" class="rounded-full shadow-2xl">
                 </div>
             </div>
         </section>
 
         <!-- About Me Section -->
-        <section id="about" class="py-24 bg-gray-50">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                <h2 class="section-heading">About Me</h2>
-                <div class="text-center">
-                    <img src="/public/images/profileimage.jpg" alt="A professional photo of [Your Name]" class="w-48 h-48 rounded-full mx-auto mb-8 shadow-xl border-4 border-white">
+        <section id="about" class="py-32 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+                <div class="text-center mb-16">
+                    <h2 class="section-heading">About Me</h2>
                 </div>
-                <div class="text-lg text-gray-700 space-y-6 text-left md:text-center leading-relaxed">
-                    <p>
-                        I'm a passionate Java Developer, currently pursuing my B.S. in Computer Science, and I also hold a degree in Business Administration. I don't just write code; I build solutions that drive business value. This unique combination allows me to understand core business operations and strategic goals, letting me bridge the critical gap between technical teams and business stakeholders.
-                    </p>
-                    <p>
-                        I am currently pursuing a Bachelor's in Computer Science to build a deep theoretical foundation, while simultaneously honing my practical skills in full-stack development. I combine robust back-end logic in <strong class="text-brand-primary">Java</strong> (Spring Boot) with modern front-end technologies like <strong class="text-yellow-500">JavaScript</strong>.
-                    </p>
-                    <p>
-                        I'm a natural problem-solver, a collaborative team player, and I'm always eager to learn. I'm looking for an opportunity to contribute to challenging projects where I can leverage both my technical and business-acumen.
-                    </p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1 text-center">
+                        <img src="/public/images/profileimage.jpg" alt="Profile photo" class="w-56 h-56 rounded-2xl mx-auto mb-8 shadow-xl object-cover">
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="space-y-6 text-lg text-gray-700 leading-relaxed">
+                            <p>
+                                I'm a <strong>Java developer</strong> with a unique perspective—I combine <strong>technical expertise</strong> with <strong>business acumen</strong>. My dual background in Computer Science and Business Administration enables me to bridge the gap between engineering teams and business stakeholders.
+                            </p>
+                            <p>
+                                I specialize in building <strong>full-stack applications</strong> using Java Spring Boot for robust back-end logic and modern JavaScript frameworks for responsive front-ends. I'm passionate about creating solutions that not only work flawlessly but also drive measurable business value.
+                            </p>
+                            <p>
+                                Currently pursuing my B.S. in Computer Science to deepen my technical foundation while continuously honing my practical development skills. I'm a problem-solver, team collaborator, and lifelong learner seeking opportunities to contribute to challenging projects.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="py-24 bg-white">
+        <section id="skills" class="py-32 bg-gradient-to-br from-white to-blue-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-heading">My Tech Stack</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
-                    
+                <div class="text-center mb-20">
+                    <h2 class="section-heading">Tech Stack</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Technologies and tools I use to build modern, scalable applications</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+
                     <!-- Skill Item: Java -->
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/f8951d/ffffff?text=Java" alt="Java Logo" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">Java</span>
-                    </div>
-                    
-                    <!-- Skill Item: Spring Boot -->
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/6db33f/ffffff?text=Spring" alt="Spring Boot Logo" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">Spring Boot</span>
-                    </div>
-                    
-                    <!-- Skill Item: JavaScript -->
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/f0db4f/000000?text=JS" alt="JavaScript Logo" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">JavaScript</span>
-                    </div>
-                    
-                    <!-- Skill Item: SQL -->
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/00758f/ffffff?text=SQL" alt="SQL Logo" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">SQL</span>
-                    </div>
-                    
-                    <!-- Skill Item: Git -->
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/f34f29/ffffff?text=Git" alt="Git Logo" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">Git</span>
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/f8951d/ffffff?text=Java" alt="Java Logo" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">Java</span>
                     </div>
 
-                    <!-- Add more skills as needed -->
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/3178c6/ffffff?text=TS" alt="TypeScript Logo" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">TypeScript</span>
+                    <!-- Skill Item: Spring Boot -->
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/6db33f/ffffff?text=Spring" alt="Spring Boot Logo" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">Spring Boot</span>
                     </div>
-                    
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/61dafb/000000?text=React" alt="React Logo" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">React</span>
+
+                    <!-- Skill Item: JavaScript -->
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/f0db4f/000000?text=JS" alt="JavaScript Logo" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">JavaScript</span>
                     </div>
-                    
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/06b6d4/ffffff?text=Tailwind" alt="Tailwind CSS Logo" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">Tailwind CSS</span>
+
+                    <!-- Skill Item: React -->
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/61dafb/000000?text=React" alt="React Logo" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">React</span>
                     </div>
-                    
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/336791/ffffff?text=PgSQL" alt="PostgreSQL Logo" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">PostgreSQL</span>
+
+                    <!-- Skill Item: SQL -->
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/00758f/ffffff?text=SQL" alt="SQL Logo" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">SQL</span>
                     </div>
-                    
-                    <div class="flex flex-col items-center p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-                        <img src="https://placehold.co/64x64/4479a1/ffffff?text=Business" alt="Business Acumen Icon" class="skill-icon mb-4">
-                        <span class="text-xl font-semibold text-gray-800">Business Acumen</span>
+
+                    <!-- Skill Item: PostgreSQL -->
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/336791/ffffff?text=PgSQL" alt="PostgreSQL Logo" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">PostgreSQL</span>
                     </div>
-                    
+
+                    <!-- Skill Item: TypeScript -->
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/3178c6/ffffff?text=TS" alt="TypeScript Logo" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">TypeScript</span>
+                    </div>
+
+                    <!-- Skill Item: Tailwind CSS -->
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/06b6d4/ffffff?text=Tailwind" alt="Tailwind CSS Logo" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">Tailwind</span>
+                    </div>
+
+                    <!-- Skill Item: Git -->
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/f34f29/ffffff?text=Git" alt="Git Logo" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">Git</span>
+                    </div>
+
+                    <!-- Skill Item: Business Acumen -->
+                    <div class="group flex flex-col items-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 border border-gray-100">
+                        <img src="https://placehold.co/64x64/0073e6/ffffff?text=Business" alt="Business Acumen" class="skill-icon mb-4 group-hover:scale-110 transition-transform">
+                        <span class="text-lg font-semibold text-gray-800">Strategy</span>
+                    </div>
+
                 </div>
             </div>
         </section>
         
         <!-- Projects Section -->
-        <section id="projects" class="py-24 bg-gray-50">
+        <section id="projects" class="py-32 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-heading">My Projects</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="text-center mb-20">
+                    <h2 class="section-heading">Featured Projects</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Showcasing my work in full-stack development and technical problem-solving</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
                     <!-- Project Card 1 -->
                     <div class="project-card">
-                        <a href="[Link to your project or GitHub repo]" target="_blank" rel="noopener noreferrer">
-                            <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/0a192f/e6f7ff?text=E-commerce+Platform" alt="Project 1 Screenshot">
+                        <a href="https://github.com/devjoseph2" target="_blank" rel="noopener noreferrer">
+                            <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/0a192f/e6f7ff?text=Project+1" alt="Project 1 Screenshot">
                         </a>
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Project Title 1</h3>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Project Title</h3>
                             <p class="text-gray-600 mb-4">
-                                A brief description of your project. What problem does it solve? What was your role?
+                                Add your project description here. What problem does it solve? What technologies did you use?
                             </p>
                             <!-- Tech Tags -->
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">Java</span>
                                 <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">Spring Boot</span>
                                 <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">PostgreSQL</span>
-                                <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">JavaScript</span>
                             </div>
                             <!-- Links -->
                             <div class="flex items-center space-x-4">
-                                <a href="[GitHub Repo URL]" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-brand-primary font-medium transition-colors">
+                                <a href="https://github.com/devjoseph2" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-brand-primary font-medium transition-colors">
                                     <svg class="w-6 h-6 mr-1.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.84c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.135 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                                     Code
-                                </a>
-                                <a href="[Live Demo URL (if any)]" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-brand-primary font-medium transition-colors">
-                                    <svg class="w-6 h-6 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                    Live Demo
                                 </a>
                             </div>
                         </div>
@@ -269,13 +277,13 @@
                     
                     <!-- Project Card 2 -->
                     <div class="project-card">
-                        <a href="[Link to your project or GitHub repo]" target="_blank" rel="noopener noreferrer">
-                            <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/0a192f/e6f7ff?text=Fintech+API" alt="Project 2 Screenshot">
+                        <a href="https://github.com/devjoseph2" target="_blank" rel="noopener noreferrer">
+                            <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/0a192f/e6f7ff?text=Project+2" alt="Project 2 Screenshot">
                         </a>
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Project Title 2</h3>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Project Title</h3>
                             <p class="text-gray-600 mb-4">
-                                A brief description of your project. What problem does it solve? What was your role?
+                                Add your project description here. What problem does it solve? What technologies did you use?
                             </p>
                             <!-- Tech Tags -->
                             <div class="flex flex-wrap gap-2 mb-4">
@@ -285,7 +293,7 @@
                             </div>
                             <!-- Links -->
                             <div class="flex items-center space-x-4">
-                                <a href="[GitHub Repo URL]" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-brand-primary font-medium transition-colors">
+                                <a href="https://github.com/devjoseph2" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-brand-primary font-medium transition-colors">
                                     <svg class="w-6 h-6 mr-1.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.84c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.135 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                                     Code
                                 </a>
@@ -295,13 +303,13 @@
                     
                     <!-- Project Card 3 -->
                     <div class="project-card">
-                        <a href="[Link to your project or GitHub repo]" target="_blank" rel="noopener noreferrer">
-                            <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/0a192f/e6f7ff?text=Data+Analysis+Tool" alt="Project 3 Screenshot">
+                        <a href="https://github.com/devjoseph2" target="_blank" rel="noopener noreferrer">
+                            <img class="h-56 w-full object-cover" src="https://placehold.co/600x400/0a192f/e6f7ff?text=Project+3" alt="Project 3 Screenshot">
                         </a>
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Project Title 3</h3>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Project Title</h3>
                             <p class="text-gray-600 mb-4">
-                                A brief description of your project. What problem does it solve? What was your role?
+                                Add your project description here. What problem does it solve? What technologies did you use?
                             </p>
                             <!-- Tech Tags -->
                             <div class="flex flex-wrap gap-2 mb-4">
@@ -311,13 +319,9 @@
                             </div>
                             <!-- Links -->
                             <div class="flex items-center space-x-4">
-                                <a href="[GitHub Repo URL]" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-brand-primary font-medium transition-colors">
+                                <a href="https://github.com/devjoseph2" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-brand-primary font-medium transition-colors">
                                     <svg class="w-6 h-6 mr-1.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.84c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.135 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                                     Code
-                                </a>
-                                <a href="[Live Demo URL (if any)]" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-700 hover:text-brand-primary font-medium transition-colors">
-                                    <svg class="w-6 h-6 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                                    Live Demo
                                 </a>
                             </div>
                         </div>
@@ -328,106 +332,102 @@
         </section>
 
         <!-- Education Section -->
-        <section id="education" class="py-24 bg-white">
+        <section id="education" class="py-32 bg-gradient-to-br from-blue-50 to-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-                <h2 class="section-heading">Education</h2>
-                
+                <div class="text-center mb-16">
+                    <h2 class="section-heading">Education</h2>
+                </div>
+
                 <!-- New Computer Science Degree Block -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200 mb-8">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 bg-brand-light rounded-full mr-4">
-                            <!-- Code Icon -->
+                <div class="bg-white p-10 rounded-2xl shadow-lg border border-blue-100 mb-8 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-start gap-6">
+                        <div class="p-4 bg-blue-100 rounded-xl flex-shrink-0">
                             <svg class="w-8 h-8 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                         </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900">Bachelor of Science in Computer Science</h3>
-                            <p class="text-lg font-medium text-gray-600">University of the People, Pasadena, CA</p>
-                            <p class="text-md text-gray-500">Expected Graduation: Nov 2026</p>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Science in Computer Science</h3>
+                            <p class="text-lg font-medium text-brand-primary mb-1">University of the People</p>
+                            <p class="text-gray-600 mb-4">Pasadena, CA • Expected Nov 2026</p>
+                            <p class="text-gray-700 text-lg">
+                                Deepening technical expertise in algorithms, data structures, software engineering principles, and advanced computer science concepts.
+                            </p>
                         </div>
                     </div>
-                    <p class="text-gray-700 text-lg">
-                        Currently deepening my technical expertise in computer science, focusing on algorithms, data structures, and advanced software development principles.
-                    </p>
                 </div>
 
                 <!-- Existing Business Degree Block -->
-                <div class="bg-gray-50 p-8 rounded-xl shadow-lg border border-gray-200">
-                    <div class="flex items-center mb-4">
-                        <div class="p-3 bg-brand-light rounded-full mr-4">
-                            <!-- Briefcase/Suitcase Icon -->
-                            <svg class="w-8 h-8 text-brand-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.12-1.15-8.411-3.099M15.000 1c-2.75 0-5.454 1.12-7.424 3.125C5.554 6.182 4.14 9.438 4 13c.14 3.56 1.554 6.818 3.576 8.875C9.546 23.88 12.25 25 15.000 25c2.75 0 5.454-1.12 7.424-3.125C24.446 19.818 25.86 16.562 26 13c-.14-3.56-1.554-6.818-3.576-8.875C20.454 2.12 17.75 1 15.000 1zM21 13c-2 0-4.5 1-6 3s-4 3-6 3"></path></svg>
+                <div class="bg-white p-10 rounded-2xl shadow-lg border border-indigo-100 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-start gap-6">
+                        <div class="p-4 bg-indigo-100 rounded-xl flex-shrink-0">
+                            <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.12-1.15-8.411-3.099M15.000 1c-2.75 0-5.454 1.12-7.424 3.125C5.554 6.182 4.14 9.438 4 13c.14 3.56 1.554 6.818 3.576 8.875C9.546 23.88 12.25 25 15.000 25c2.75 0 5.454-1.12 7.424-3.125C24.446 19.818 25.86 16.562 26 13c-.14-3.56-1.554-6.818-3.576-8.875C20.454 2.12 17.75 1 15.000 1zM21 13c-2 0-4.5 1-6 3s-4 3-6 3"></path></svg>
                         </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-gray-900">Bachelor of Business Administration</h3>
-                            <p class="text-lg font-medium text-gray-600">Liberia International Christian College (LICC), Ganta City, Liberia</p>
-                            <p class="text-md text-gray-500">[Graduation Year]</p>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Bachelor of Business Administration</h3>
+                            <p class="text-lg font-medium text-indigo-600 mb-1">Liberia International Christian College (LICC)</p>
+                            <p class="text-gray-600 mb-4">Ganta City, Liberia • Completed</p>
+                            <p class="text-gray-700 text-lg">
+                                Strong foundation in market analysis, financial principles, and project management, enabling me to bridge technical and business perspectives.
+                            </p>
                         </div>
                     </div>
-                    <p class="text-gray-700 text-lg">
-                        My business degree provided me with a strong foundation in market analysis, financial principles, and project management, which I now apply to build more effective and strategic software.
-                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-24 bg-brand-dark text-gray-200">
+        <section id="contact" class="py-32 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-gray-200">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
-                <h2 class="text-4xl font-bold text-white mb-6">Get In Touch</h2>
-                <p class="text-xl text-gray-300 mb-10">
-                    I'm currently seeking new opportunities and am open to messages. Whether you have a question, a project proposal, or just want to connect, feel free to use the form below.
+                <h2 class="text-5xl font-bold text-white mb-6">Let's Connect</h2>
+                <p class="text-xl text-gray-300 mb-12">
+                    I'm actively seeking opportunities to contribute my skills to impactful projects. Reach out—I'd love to hear from you.
                 </p>
-                
-                <form action="https://formspree.io/f/mvgvbpkk" method="POST" class="text-left max-w-xl mx-auto">
+
+                <form action="https://formspree.io/f/mvgvbpkk" method="POST" class="text-left max-w-xl mx-auto mb-12">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                            <label for="name" class="block text-sm font-semibold text-gray-300 mb-3">Full Name</label>
                             <input type="text" name="name" id="name" required
-                                   class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
+                                   class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
                         </div>
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                            <label for="email" class="block text-sm font-semibold text-gray-300 mb-3">Email Address</label>
                             <input type="email" name="email" id="email" required
-                                   class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
+                                   class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
                         </div>
                     </div>
                     <div class="mt-6">
-                        <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                        <label for="subject" class="block text-sm font-semibold text-gray-300 mb-3">Subject</label>
                         <input type="text" name="subject" id="subject"
-                               class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all">
+                               class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
                     </div>
                     <div class="mt-6">
-                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                        <label for="message" class="block text-sm font-semibold text-gray-300 mb-3">Message</label>
                         <textarea name="message" id="message" rows="5" required
-                                  class="w-full px-4 py-3 rounded-lg bg-gray-800 border-gray-700 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all"></textarea>
+                                  class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"></textarea>
                     </div>
                     <div class="mt-8 text-center">
                         <button type="submit"
-                                class="inline-block bg-brand-primary text-white font-bold text-lg px-10 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                                class="inline-block bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold text-lg px-12 py-3 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                             Send Message
                         </button>
                     </div>
                 </form>
 
-                <!-- Divider -->
-                <div class="my-12 flex items-center justify-center">
-                    <span class="border-t border-gray-700 flex-grow"></span>
-                    <span class="px-4 text-gray-500">OR</span>
-                    <span class="border-t border-gray-700 flex-grow"></span>
+                <!-- Contact Options -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-8 pt-8 border-t border-slate-700">
+                    <a href="mailto:josephsmark2014@mail.com" class="flex items-center gap-3 text-blue-400 hover:text-blue-300 text-lg font-medium transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                        josephsmark2014@mail.com
+                    </a>
                 </div>
 
-                <!-- Email Link -->
-                <a href="mailto:josephsmark2014@mail.com" class="text-brand-primary hover:text-blue-400 text-lg font-medium transition-colors">
-                    josephsmark2014@mail.com
-                </a>
-                
                 <!-- Social Links -->
-                <div class="flex justify-center space-x-8 mt-10">
-                    <a href="https[Your LinkedIn URL]" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" title="LinkedIn">
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <div class="flex justify-center gap-6 mt-12">
+                    <a href="https://github.com/devjoseph2" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-700 rounded-full text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300 transform hover:scale-110" title="GitHub">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.84c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.135 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
                     </a>
-                    <a href="https[Your GitHub URL]" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" title="GitHub">
-                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.84c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .267.18.577.688.48C19.135 20.165 22 16.418 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                    <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" class="p-3 bg-slate-700 rounded-full text-gray-400 hover:text-white hover:bg-blue-600 transition-all duration-300 transform hover:scale-110" title="LinkedIn">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                     </a>
                 </div>
             </div>
@@ -436,13 +436,13 @@
     </main>
     
     <!-- Footer -->
-    <footer class="bg-gray-100 border-t border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-            <p class="text-gray-600">
-                &copy; 2024 Matthias M Joseph. All rights reserved.
+    <footer class="bg-slate-900 border-t border-slate-800">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+            <p class="text-gray-400">
+                &copy; 2025 Matthias M Joseph. All rights reserved.
             </p>
-            <p class="text-gray-500 text-sm mt-1">
-                Built with HTML, Tailwind CSS, and a dash of coffee.
+            <p class="text-gray-500 text-sm mt-2">
+                Designed and built with care • GitHub: @devjoseph2
             </p>
         </div>
     </footer>
